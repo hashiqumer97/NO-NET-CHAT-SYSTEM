@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NO NET CHAT SYSTEM - FINAL", "NO NET CHAT SYSTEM - FINAL\NO NET CHAT SYSTEM - FINAL.csproj", "{13E9D458-ACDD-49CD-A659-441ED2B35407}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NO-NET CHAT SYSTEM - VIDEO CALL", "NO-NET CHAT SYSTEM - VIDEO CALL\NO-NET CHAT SYSTEM - VIDEO CALL.vbproj", "{3777B6EC-4BCA-4976-A046-4D5353E45C7D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NO NET CHAT SYSTEM - SETUP", "NO NET CHAT SYSTEM - SETUP\NO NET CHAT SYSTEM - SETUP.vdproj", "{0D9BDFE7-85FB-46E5-AF68-8EEA7E7EDBCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13E9D458-ACDD-49CD-A659-441ED2B35407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E9D458-ACDD-49CD-A659-441ED2B35407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E9D458-ACDD-49CD-A659-441ED2B35407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E9D458-ACDD-49CD-A659-441ED2B35407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3777B6EC-4BCA-4976-A046-4D5353E45C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3777B6EC-4BCA-4976-A046-4D5353E45C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3777B6EC-4BCA-4976-A046-4D5353E45C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3777B6EC-4BCA-4976-A046-4D5353E45C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D9BDFE7-85FB-46E5-AF68-8EEA7E7EDBCF}.Debug|Any CPU.ActiveCfg = Debug
+		{0D9BDFE7-85FB-46E5-AF68-8EEA7E7EDBCF}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
