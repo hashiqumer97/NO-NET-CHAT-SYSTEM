@@ -33,7 +33,7 @@ namespace NO_NET_CHAT_SYSTEM___FINAL
 
         public void login(string username, string password)
         {
-            if (txt_ipaddress.Text == "127.0.0.1")
+            if (txt_ipaddress.Text == "192.168.1.103")
             {
                 try
                 {
