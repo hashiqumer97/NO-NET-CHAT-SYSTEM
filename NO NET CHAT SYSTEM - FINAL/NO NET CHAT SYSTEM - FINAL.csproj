@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13E9D458-ACDD-49CD-A659-441ED2B35407}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NO_NET_CHAT_SYSTEM___FINAL</RootNamespace>
+    <AssemblyName>NO NET CHAT SYSTEM - FINAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>systemicon_THN_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.5.0\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Console, Version=3.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Console.3.0.1\lib\net45\Serilog.Sinks.Console.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Literate, Version=3.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Literate.3.0.0\lib\net45\Serilog.Sinks.Literate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleTCP, Version=1.0.24.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleTCP.1.0.24\lib\net45\SimpleTCP.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XSockets.Controllers, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Controllers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Core.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Core.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Core.Communication, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Core.Communication.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.CustomProtocol, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.CustomProtocol.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Enterprise, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Enterprise.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Logger, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Logger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Plugin.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Plugin.Framework.4.0.0\lib\net40\XSockets.Plugin.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Protocol, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Protocol.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Serialization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=da46457513262a6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\XSockets.Server.4.0.0\lib\net40\XSockets.Server.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_attachment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_attachment.Designer.cs">
+      <DependentUpon>frm_attachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_changepassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_changepassword.Designer.cs">
+      <DependentUpon>frm_changepassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_chatwindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_chatwindow.Designer.cs">
+      <DependentUpon>frm_chatwindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_forgetpassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_forgetpassword.Designer.cs">
+      <DependentUpon>frm_forgetpassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_createchat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_createchat.Designer.cs">
+      <DependentUpon>frm_createchat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_modifysecurityquestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_modifysecurityquestions.Designer.cs">
+      <DependentUpon>frm_modifysecurityquestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_registeruser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_registeruser.Designer.cs">
+      <DependentUpon>frm_registeruser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_modifyuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_modifyuser.Designer.cs">
+      <DependentUpon>frm_modifyuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="No_Net_Chat_System_Dataset.cs">
+      <DependentUpon>No_Net_Chat_System_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="No_Net_Chat_System_Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>No_Net_Chat_System_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_attachment.resx">
+      <DependentUpon>frm_attachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_changepassword.resx">
+      <DependentUpon>frm_changepassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_chatwindow.resx">
+      <DependentUpon>frm_chatwindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_createchat.resx">
+      <DependentUpon>frm_createchat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_forgetpassword.resx">
+      <DependentUpon>frm_forgetpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_modifysecurityquestions.resx">
+      <DependentUpon>frm_modifysecurityquestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_registeruser.resx">
+      <DependentUpon>frm_registeruser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_modifyuser.resx">
+      <DependentUpon>frm_modifyuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="No_Net_Chat_System_Dataset.xsc">
+      <DependentUpon>No_Net_Chat_System_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="No_Net_Chat_System_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>No_Net_Chat_System_Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="No_Net_Chat_System_Dataset.xss">
+      <DependentUpon>No_Net_Chat_System_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="package.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White-Wallpaper-HD-Background-Free.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\download %282%29.png" />
+    <None Include="Resources\80-802562_speech-bubble-icon-png-live-chat-icon-png.png" />
+    <None Include="Resources\imgonline-com-ua-resize-A4iomOV8rn.png" />
+    <None Include="Resources\open_icon.png" />
+    <None Include="Resources\decrypt_icon.png" />
+    <None Include="Resources\encrypt_icon.png" />
+    <None Include="Resources\save_icon.png" />
+    <None Include="Resources\start_icon.png" />
+    <None Include="Resources\tick_icon.png" />
+    <None Include="Resources\clear_icon.png" />
+    <None Include="Resources\create_icon.png" />
+    <None Include="Resources\login_icon.png" />
+    <None Include="Resources\registeruser_icon.png" />
+    <None Include="Resources\forgotpassword_icon.png" />
+    <None Include="Resources\deleteuser_icon.png" />
+    <None Include="Resources\resetpassword_icon.png" />
+    <None Include="Resources\modify_icon.png" />
+    <None Include="Resources\modifyuser_icon.png" />
+    <Content Include="systemicon_THN_icon.ico" />
+    <Content Include="XSocketsNET\ServerExample\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NO-NET CHAT SYSTEM - VIDEO CALL\NO-NET CHAT SYSTEM - VIDEO CALL.vbproj">
+      <Project>{3777b6ec-4bca-4976-a046-4d5353e45c7d}</Project>
+      <Name>NO-NET CHAT SYSTEM - VIDEO CALL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
